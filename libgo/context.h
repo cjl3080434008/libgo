@@ -69,8 +69,10 @@ namespace co
 
 } //namespace co
 
-#if USE_BOOST_COROUTINE
+#if USE_BOOST_COROUTINE == 1
 # include "ctx_boost_coroutine/context.h"
+#elif USE_BOOST_COROUTINE == 2
+# include "ctx_boost_coroutine2/context.h"
 #elif USE_UCONTEXT
 # include "ctx_ucontext/context.h"
 #elif USE_FIBER
